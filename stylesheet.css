@@ -1,0 +1,52 @@
+
+/*
+Variables CSS o Custom propieties: Las variables deben declararse dentro de un selector
+   Se acostumbra usar :root para que la variable sea global 
+   Se declaran con dos guiones y el nombre
+   Para utilizarlas se usa la funcion var() y entre
+   los paréntesis se escribe el nombre de la variable
++No tienen scope de bloque como JS, El valor es heredado a los hijos
++El valor puede redefinirse por cascada
+
+Ejemplo: 
+
+:root {
+  --my-color: red
+}
+
+body {
+  color: var(--my-color)
+}
+
+*/
+/*Declaramaos las variables, con valores por default, root esta arriba de html.*/
+:root{  
+    --base: #ffc600;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+
+img{
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur)) ;  /*Filter para darle el efecto blur.*/
+}
+.hl{
+    color: var(--base);
+}
+
+
+body{
+    text-align: center;
+}
+body{
+    background-color: rgb(46, 46, 46);
+    color: white;
+    font-family: 'Helvetica neue', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+}
+.controls{
+    margin-bottom: 50px;
+}
